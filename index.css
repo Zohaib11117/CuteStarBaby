@@ -1,0 +1,420 @@
+/* https://www.ingridkuhn.com/themes/doggo/index2.php */
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@font-face {
+    font-family: "mogila";
+    src: url("Moilgo.otf");
+    src: url("Moilgo.otf") format("otf"),
+    }
+.main-1{
+    background-image: url("images/firstbg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:fixed ;
+  background-size: cover;
+  height: 100vh;
+  /* position:relative ; */
+  top: 0%;
+  width: 100%;
+}
+.firstmain{
+    background-image: url("images/head.png");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* background-position:fixed ; */
+  background-size: cover;
+  /* height: 100vh; */
+  /* position:relative ; */
+  /* top: 0%; */
+  /* width: 100%; */
+}
+.mtbtn{
+padding-top: 35%;
+}
+.font-plus{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.font-plus-1{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+.font-plus-12{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    color: gray;
+    font-size: 12px;
+}
+.footer-head{
+    color:white;
+    text-decoration: none;
+}
+
+.section-4{
+   height: auto;
+}
+
+.section-5{
+   
+    background-color: #FFF6E8;
+    height: auto;
+    /* background-color: white; */
+    /* position:relative ; */
+    /* top: 0%; */
+    width: 100%;
+}
+.section-6{
+   
+    background-color: white;
+    
+    width: 100%;
+}
+.section-2{
+  height: auto;
+  /* background-color:red; */
+  /* opacity: 0.5; */
+}
+/* .section-3{
+  height: 100vh;
+  background-color:orange;
+  opacity: 0.5;
+} */
+.nav-head-button{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    background-color:#F15A90;
+    color:white;
+    font-size: 20px;
+    padding: 5px 16px;
+    border-radius:20px;
+    
+}
+.font-div-1{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    /* background-color:#F15A90; */
+    color:white;
+    font-size: 18px;
+    /* padding: 5px 16px; */
+    /* border-radius:20px; */
+    
+}
+.font-div-12{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    /* background-color:#F15A90; */
+    color:white;
+    font-size: 27px;
+    /* padding: 5px 16px; */
+    /* border-radius:20px; */
+    
+}
+.card-border{
+    border-radius:40px;
+    box-shadow: 0px 0px 3px #F4876B;;
+}
+.font-div-3{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    /* background-color:#F15A90; */
+    color:black;
+    font-size: 30px;
+    /* padding: 5px 16px; */
+    /* border-radius:20px; */
+    
+}
+.font-div-32{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    /* background-color:#F15A90; */
+    color:#F4876B;
+    font-size: 35px;
+    /* padding: 5px 16px; */
+    /* border-radius:20px; */
+    
+}
+.font-div-323{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    /* background-color:#F15A90; */
+    color:grey;
+    font-size: 25px;
+    /* padding: 5px 16px; */
+    /* border-radius:20px; */
+    
+}
+.formbtn{
+    background-color:#F15A90;
+    color: white;
+}
+.rounded-pill{
+    border-radius: 30px;
+    
+}
+.main-22{
+    position: absolute;
+    top:450%;
+    background-color: black;
+    
+    /* width: 100vw; */
+    /* top: ; */
+}
+.main-22-about{
+    /* position: absolute;
+    top:450%; */
+    background-color: black;
+    
+    /* width: 100vw; */
+    /* top: ; */
+}
+.font-div-301{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    /* background-color:#F15A90; */
+    color:grey;
+    font-size: 15px;
+    /* padding: 5px 16px; */
+    /* border-radius:20px; */
+    
+}
+.main-down{
+    position: absolute;
+}
+.div-1{
+     /* font-family: 'Nunito', sans-serif; */
+    /* font-weight: 600; */
+    background-color:#F4876B;
+    /* color:white; */
+    /* font-size: 22px; */
+    /* padding: 5px 16px; */
+    border-radius:30px 30px 0px 0px;
+    
+}
+.div-1-about{
+     /* font-family: 'Nunito', sans-serif; */
+    /* font-weight: 600; */
+    background-color:#F4876B;
+    /* color:white; */
+    /* font-size: 22px; */
+    /* padding: 5px 16px; */
+    border-radius:30px 30px 30px 30px;
+    
+}
+.div-2{
+     /* font-family: 'Nunito', sans-serif; */
+    /* font-weight: 600; */
+    background-color:#F4876B;
+    /* color:white; */
+    /* font-size: 22px; */
+    /* padding: 5px 16px; */
+    border-radius:0px 0px 30px 30px;
+    
+}
+.nav-head-active{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color:#F15A90 !important;
+    font-size: 18px;
+    
+}
+.main-upper{
+    position: absolute;
+    background-color: red;
+    height: 70vh;
+    width: 100vw;
+}
+.img-1{
+    position: absolute;
+    top: 0%;
+}
+.img-2{
+    position: absolute;
+    top:0;
+    right:0%
+}
+.img-3{
+    position: absolute;
+    top:0%
+}
+.img-4{
+    position: absolute;
+    left:0%;
+    top:0%;
+}
+.nav-head{
+     font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color:#333333;
+    font-size: 18px;
+    
+}
+.main-heading1{
+     font-family: 'mogila', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 60px;
+    
+}
+.color-pink{
+   color: #F15ABE;
+}
+.color-orange{
+    color:#F4876B;
+}
+.mogila{
+     font-family: 'mogila', sans-serif;
+    font-weight: 400;
+    /* color: white; */
+    font-size: 60px;
+    
+}
+.mogila-30{
+     font-family: 'mogila', sans-serif;
+    font-weight: 400;
+    /* color: white; */
+    font-size: 30px;
+    
+}
+.main-heading13{
+     font-family: 'mogila', sans-serif;
+    font-weight: 400;
+    color:#F4876B;
+    font-size: 50px;
+    
+}
+.main-heading2-1{
+    font-family: 'mogila', sans-serif;
+    font-weight: 400;
+    color:#6DDA7E;
+   
+    font-size: 38px;
+}
+.main-heading2-2{
+    font-family: 'mogila', sans-serif;
+    font-weight: 400;
+    color:
+    #F15ABE;
+   
+    font-size: 38px;
+}
+.main-heading2-3{
+    font-family: 'mogila', sans-serif;
+    font-weight: 400;
+    color:#F1BF5A;
+   
+    font-size: 38px;
+}
+.main-heading12{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+   
+    font-size: 70px;
+}
+.main-heading3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #043775;
+    font-size: 44px;
+}
+.main-heading4{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #043775;
+    font-size: 20px;
+}
+.fontp{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color:grey;
+    font-size: 14px;
+}
+.fontp-wp{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color:#989EA1;
+    font-size: 18px;
+    
+}
+.fontt{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #F8AE4F;
+    font-size: 14px;
+}
+.font-16{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    /* color: #F8AE4F;; */
+    font-size: 16px;
+}
+.font-21{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    /* color: #F8AE4F;; */
+    font-size: 25px;
+}
+.call-img{
+    border: 9px solid white;
+}
+
+.font-nunito{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    
+}
+.testimonial{
+    border-radius: 0px 100px 0px 100px;
+    background-color: #FFF6E8;
+}
+.color-blue{
+    color: #043775;
+}
+.input-contact{
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .footer{
+    background-color:#043775;
+  }
+.about{
+    background-color: #FFF6E8;
+}
+.form-2{
+    background-color: #F8AE4F;
+}
+.form-3{
+    background-color:#EAE4D2;
+}
+.circle{
+    border:8px solid #F8AE4F;
+}
+.border-yellow{
+    border:1px solid #F8AE4F;
+}
+.color-black{
+    color: black;
+}
+.img-div-1{
+    top: -4%;
+    width: 40%;
+    position:relative
+    /* right: 5%; */
+}
+.img-div-2{
+    top: -10%;
+    left: 8%;
+    width: 70%;
+    position:relative
+}
+.color-yellow{
+    color: #F8AE4F;;
+}
+.img-div-3{
+    top: 0%;
+    width: 40%;
+    position:relative
+}
