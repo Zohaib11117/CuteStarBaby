@@ -155,8 +155,8 @@ padding-top: 35%;
     
 }
 .main-22{
-    position: absolute;
-    top:450%;
+    /* position: absolute; */
+    /* top:50%; */
     background-color: black;
     
     /* width: 100vw; */
@@ -180,8 +180,10 @@ padding-top: 35%;
     /* border-radius:20px; */
     
 }
-.main-down{
-    position: absolute;
+.maindown{
+    position: relative;
+    margin-top: -150px;
+
 }
 .div-1{
      /* font-family: 'Nunito', sans-serif; */
