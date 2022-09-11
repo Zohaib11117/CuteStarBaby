@@ -385,6 +385,9 @@ padding-top: 35%;
 .about{
     background-color: #FFF6E8;
 }
+.pointer{
+    cursor: pointer;
+}
 .form-2{
     background-color: #F8AE4F;
 }

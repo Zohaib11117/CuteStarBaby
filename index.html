@@ -19,7 +19,41 @@
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script>
+    $(document).ready(function(){
+        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+
+function get_action(form) 
+{
+    var v = grecaptcha.getResponse();
+    if(v.length == 0)
+    {
+        document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+        return false;
+    }
+    else
+    {
+         document.getElementById('captcha').innerHTML="Captcha completed";
+        return true; 
+    }
+}
+
+</script>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -61,7 +95,7 @@
             </li>
             <li class="nav-item px-3">
               <a class="nav-link" href="#"
-                ><button class="nav-head-button border-0">Register</button></a
+                ><button type="button" class="pointer formbtn border-0 rounded-pill py-3   px-5"  data-toggle="modal" data-target=".bd-example-modal-lg"> Register</button></a
               >
             </li>
           </ul>
@@ -69,9 +103,321 @@
       </nav>
       <div class="container py-5">
         <div class="firstmain w-100 " >
-          <div class="text-center mtbtn">
-          <button class=" formbtn border-0 rounded-pill py-3   px-5"> Register</button>
+          <div class=" text-center mtbtn">
+          <button type="button" class="pointer formbtn border-0 rounded-pill py-3   px-5"  data-toggle="modal" data-target=".bd-example-modal-lg"> Register</button>
+        </div>
+          <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+          </button> -->
+          
+          <!-- Modal -->
+          <div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content form-2">
+                <div class="modal-header">
+                  <!-- <h5 class="modal-title" id="exampleModalLabel">Fill the form below</h5> -->
+                      <h4
+                        class="text-center font-nunito color-blue pt-3"
+                      >
+                        Registration Form
+                      </h4>
+                     
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="row mt-2">
+                     
+                      <div class="col-md-6 col-12 pt-md-4 pt-4">
+                        <small class="font-nunito">First Name*</small>
+
+                        <div
+                          class="py-2 px-3 border rounded color-bg"
+                        >
+                          <div class="">
+                            <input
+                            name="f-name"
+                              type="text"
+                              class="input-contact w-100"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12 pt-md-4 pt-4">
+                        <small class="font-nunito">Last Name*</small>
+
+                        <div
+                          class="py-2 px-3 border rounded color-bg"
+                        >
+                          <div class="">
+                            <input
+                            name="l-name"
+                              type="text"
+                              class="input-contact w-100"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12 pt-md-4 pt-4">
+                        <small class="font-nunito">Gender</small>
+
+                        <div
+                          class="py-2 px-3 rounded color-bg d-flex"
+                        >
+                          <div class="w-50">
+                            <input
+                            name="gender" 
+                            type="radio"
+                            class="input-contac "
+                            /> Male
+                            
+                          </div>
+                          <div class="">
+                            <input
+                            name="gender" 
+                            type="radio"
+                              class="input-contac"
+                            /> Female
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12 pt-md-4 pt-4">
+                        <small class="font-nunito">Date of birth</small>
+
+                        <div
+                          class="color-bg"
+                        >
+                          <div class="">
+                            <input class="form-control form-2" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                            <!-- <input
+                              type="text"
+                              class="input-contact w-100"
+                            /> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12 pt-md-4 pt-4">
+                        <small class="font-nunito">WhatsApp Number</small>
+
+                        <div
+                          class="py-2 px-3 border rounded color-bg"
+                        >
+                          <div class="">
+                            <input
+                              type="number"
+                              class="input-contact w-100"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+
+                      <div class="col-md-6 col-12 pt-md-4 pt-3">
+                        <small class="font-nunito">Email Address*</small>
+                        <div
+                          class="py-2 px-3 border rounded color-bg"
+                        >
+                          <div class="">
+                            <input
+                              type="email"
+                              class="input-contact w-100"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12 pt-md-4 pt-3">
+                        <small class="font-nunito"
+                          >Terms & Conditions</small
+                        >
+
+                        <div
+                          class="py-2 px-3 rounded color-bg"
+                        >
+                          <div class="">
+                            <input
+                              type="checkbox"
+                              class="input-contact"
+                            />  Accept 
+          <button type="button" class="border-0 input-contact pointer" data-toggle="modal" data-target=".bd-example-modal-md">
+            Terms & Conditions
+          </button>
+                            
+                            
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-12 col-12 pt-md-4 pt-3">
+                        <small></small>
+                      
+                        <button
+                          type="submit"
+                          class="w-100 border text-center bg-success text-white fw-bold py-3 rounded color-bg1"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
           </div>
+
+<div class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLabel">Fill the form below</h5> -->
+              <h4
+                class=" font-nunito color-blue pt-3"
+              >
+                Terms and conditions
+              </h4>
+             
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="">
+            <div class=" pt-2 pb-4">
+              <h4
+              class=" font-nunito color-blue pt-3"
+            >
+            Eligibility:
+            </h4>
+              <p class="font-div-1 text-dark pt-3">
+                To be eligible for the Cute Star Babies contest, the parent or guardian must;<br />
+                ●Ensure that the child is a legal citizen of Nigeria<br />
+                 
+                ● Ensure that the child is between the ages of 0 and 15 years.<br />
+                 
+                ● Ensure that the child has a valid birth certificate. The certificate can be requested, at
+                any time, during the contest.<br />
+                 
+                ● Write a consent letter permitting the child to be part of the contest. It is vital if the child
+                emerges the winner of the contest.<br />
+                 
+                ● Ensure that all information submitted is accurate, current, and complete and that they
+                have full rights to the images and details/data uploaded. The company using the said
+                material shall not constitute a breach of any third party's copyright or other intellectual
+                property rights.<br />
+                 
+                ● Not be related to employees of the company, as employees of the company, their
+                respective affiliates, subsidiaries, related companies, advertising, promotional agencies,
+                and the household members of any of the above are not eligible to participate in the
+                contest.<br />
+                 
+                ● Agree that the company has the full right at any time to require proof of identity and
+                eligibility to participate in the contest. You shall be disqualified if you cannot provide
+                proof of eligibility.<br />
+                 
+                ● Ensure that all the requested information is truthful, complete, accurate, and not
+                misleading.<br />
+                 
+                ● In their sole discretion, they agree that the company reserves the right to disqualify any
+                participant who provides untruthful, incomplete, inaccurate, or misleading personal
+                details<br />
+              </p>
+            </div>
+            <div class=" pt-2 pb-4">
+              <h4
+              class=" font-nunito color-blue pt-3"
+            >
+            Conduct:<br />
+            </h4>
+              <p class="font-div-1 text-dark pt-3">
+                
+  ● By registering for the contest, you agree to be bound by the contest rules<br />
+ 
+● You agree to be bound by all the company's decisions to be binding and final.
+  The company reserve the right, in its sole discretion, to disqualify any participant who is
+found to:<br />
+● Have violated the rules.<br />
+ 
+● Be meddling or trying to interfere with the smooth operation of the contest.<br />
+ 
+● Violate the terms of service, use conditions, general rules or guidelines,
+property, or service or also act in a disruptive manner to harass or abuse other
+participants<br />
+              </p>
+            </div>
+            <div class=" pt-2 pb-4">
+              <h4
+              class=" font-nunito color-blue pt-3"
+            >
+            Disclaimer<br />
+            </h4>
+              <p class="font-div-1 text-dark pt-3">
+                
+                
+                ● The company assumes no responsibility or liability for lost, late, unintelligible/illegible, falsified,
+                damaged, misdirected, or incomplete entries, nor is it liable for missed notifications, responses,
+                replies, or any release, or for any computer or technical malfunctions that may occur, including
+                but not limited to malfunctions that may affect the transmission or non-transmission of an entry.<br />
+                ● The company is not responsible for any inaccurate information, whether caused by any
+                telecoms company or website users or by any equipment or programming associated with or
+                utilized in the contest, or by any technical or human error that may occur in the contest
+                administration.<br />
+                ● The company assumes no responsibility for any error, omission, interruption, deletion, defect,
+                delay in operation or transmission, communications line failure, theft or destruction, or
+                unauthorized access to, or alteration of entries.<br />
+                ● The company is not responsible for any problems, failures, or technical malfunction of any
+                telephone network or lines, online computer systems, servers, providers, computer equipment,
+                software, email, players, or browsers, on account of technical problems or traffic congestion on
+                the Internet, at any website, or on account of any combination of the preceding or otherwise.<br />
+                ● The company is not responsible for any injury or damage to the contestant or any phones
+                /computer related to participating or downloading materials in this contest.<br />
+                ● Contestant assumes liability for injuries caused or claimed to be caused by participating in the
+                contest or by the acceptance, possession, use of, or failure to receive any Prize<br />
+              </p>
+            </div>
+            <div class=" pt-2 pb-4">
+              <h4
+              class=" font-nunito color-blue text-danger pt-3"
+            >
+            WARNING:
+            </h4>
+              <p class="font-div-1 text-dark pt-3">
+                
+IF ANY CONTESTANT BY ANY MEANS PURPOSEFULLY SABOTAGES THE
+CONTEST, ITS WEBSITE, SOCIAL MEDIA HANDLES, OR ANY RELATED WEBSITE,
+OR UNDERMINES THE SMOOTH RUNNING OF THE CONTEST, THEY MAY BE
+CHARGED WITH VIOLATION OF CRIMINAL AND CIVIL LAWS. THE LAW PERMITS
+THE COMPANY TO TAKE EVERY NECESSARY STEP, INCLUDING CRIMINAL
+PROSECUTION, TO MAKE AMENDS FOR ALL DAMAGES INCURRED BY THE
+ACTIONS OF THE CONTESTANT. THE COMPANY ALSO HAS THE RIGHT TO
+DISQUALIFY ANY CONTESTANT DISCOVERED FOUND BREAKING OR TO HAVE
+BROKEN THE RULES OF THE CONTEST.<br /><br />
+All contestants must behave appropriately and obey all rules during the various phases
+of the contest.
+                
+               
+              </p>
+            </div>
+            
+            
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+     
+
+
+
+    </div>
+  </div>
+</div>
         </div>
       </div>
       <!-- </div> -->
